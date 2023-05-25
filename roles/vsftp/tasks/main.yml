@@ -1,0 +1,8 @@
+---
+- name: Install FTP package on Ubuntu
+  apt:
+    name: vsftpd
+    state: present
+
+- name: Start FTP Service
+  service: name=vsftpd state=started enabled=yes
